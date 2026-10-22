@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>WhatsApp Bot</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">
+    <div class="title-container">
+      <div class="logo">W</div>
+      <h2>WhatsApp Bot</h2>
+    </div>
+    <label class="switch" title="Ativar ou desativar o bot">
+      <input type="checkbox" id="toggleEnabled" checked>
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="status-bar" id="statusBar">
+    <span class="status-indicator active"></span>
+    <span id="statusText">Bot Ativo e Monitorando</span>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Contatos Monitorados</div>
+    <div class="add-contact-row">
+      <input type="text" id="newContactInput" placeholder="Ex: Nome do Contato..." />
+      <button id="addContactBtn" title="Adicionar Contato">+</button>
+    </div>
+    <div class="contact-tags" id="contactTags"></div>
+    <div class="options-group">
+      <label class="checkbox-label">
+        <input type="checkbox" id="requirePrefix">
+        <span>Monitorar por prefixo no nome do contato</span>
+      </label>
+      <div class="prefix-input-row" id="prefixContainer" style="display: flex; gap: 6px; margin-top: 4px;">
+        <input type="text" id="prefixTextInput" placeholder="Ex: Suporte, Cliente, VIP..." />
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Respostas de Cumprimento</div>
+    <div class="greeting-row">
+      <label>Bom dia:</label>
+      <input type="text" id="respBomDia" value="Bom dia, tudo bem e contigo?">
+    </div>
+    <div class="greeting-row">
+      <label>Boa tarde:</label>
+      <input type="text" id="respBoaTarde" value="Boa tarde, tudo bem e contigo?">
+    </div>
+    <div class="greeting-row">
+      <label>Boa noite:</label>
+      <input type="text" id="respBoaNoite" value="Boa noite, tudo bem e contigo?">
+    </div>
+    <div class="greeting-row">
+      <label>Oi / Opa:</label>
+      <input type="text" id="respOi" value="Opa, bão, tudo bem?">
+    </div>
+    <button id="saveGreetingsBtn" class="btn-secondary">Salvar Cumprimentos</button>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Testes & Atividades</div>
+    <button id="testNotificationBtn" class="btn-primary">🔔 Testar Notificação no Windows</button>
+    <div class="logs-container" id="logsContainer">
+      <div class="empty-logs">Nenhuma atividade recente registrada.</div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

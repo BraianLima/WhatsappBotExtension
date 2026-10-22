@@ -1,0 +1,15 @@
+{
+  "enabled": true,
+  "contacts": [
+    "Contato Exemplo"
+  ],
+  "requirePrefix": false,
+  "prefixText": "",
+  "greetingResponses": {
+    "bom_dia": "Bom dia, tudo bem e contigo?",
+    "boa_tarde": "Boa tarde, tudo bem e contigo?",
+    "boa_noite": "Boa noite, tudo bem e contigo?",
+    "oi": "Opa, bão, tudo bem?"
+  },
+  "inactivityResetHours": 4
+}
